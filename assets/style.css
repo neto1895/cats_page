@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5DEB3;
+    font-family: Arial, sans-serif;
+}
+main h1{
+    text-align: center;
+    font-size: medium;
+}
+
+header {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.cat {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cat:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.cat img {
+    max-width: 100%;
+    height: auto;
+}
+
+.cat-info {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.cat:hover .cat-info {
+    opacity: 1;
+    bottom: -70px;
+}
+
+.cat.left {
+    float: left;
+}
+
+.cat.right {
+    float: right;
+}
+
+.cat.left:nth-child(odd) {
+    clear: both;
+}
+
+.cat.right:nth-child(even) {
+    clear: both;
+}
+
+.cat:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cat {
+        width: 80%;
+    }
+}
+.cat-paws {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .cat-paw {
+    width: 50px;
+    height: 50px;
+    background-image: url("https://unsplash.com/s/photos/cat-paw");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+  }
+  
+  .cat-paw:hover {
+    transform: scale(1.2);
+  }
+  
